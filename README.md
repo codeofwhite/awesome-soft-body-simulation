@@ -3,7 +3,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-> A curated list of resources on deformable/soft body simulation, dexterous manipulation, tactile sensing, and physics-based generation.
+> A curated list of resources on deformable and soft body simulation — physics engines, cloth simulation, differentiable simulation, and physics-based 3D generation.
 
 [English](README.md) | [中文](README.zh-CN.md)
 
@@ -11,54 +11,46 @@
 
 ## Contents
 
-- [Benchmarks & Datasets](#benchmarks--datasets)
 - [Simulators & Engines](#simulators--engines)
-- [Dexterous Manipulation + Deformable](#dexterous-manipulation--deformable)
-- [Garment & Cloth](#garment--cloth)
-- [Tactile Sensing](#tactile-sensing)
+- [Cloth & Garment Simulation](#cloth--garment-simulation)
+- [Differentiable Simulation](#differentiable-simulation)
+- [Benchmarks & Environments](#benchmarks--environments)
+- [Learning-Based Methods](#learning-based-methods)
 - [Physics-Based 3D Asset Generation](#physics-based-3d-asset-generation)
-- [Learning for Deformable Objects](#learning-for-deformable-objects)
-- [Fundamentals (PBD, FEM, etc.)](#fundamentals-pbd-fem-etc)
 
 ---
 
-## Benchmarks & Datasets
-
-- [DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo](https://arxiv.org/abs/2605.16257) - Task-oriented dexterous manipulation benchmark on MuJoCo, covering tool-use, bimanual coordination, and long-horizon execution. 📄 📊
-
-- [SoftVTBench: A Safety-Aware Visuo-Tactile Benchmark for Physically Constrained Robotic Manipulation](https://arxiv.org/abs/2607.04234) - Safety-aware visuo-tactile benchmark focusing on physical constraints during deformable object manipulation. 📄 📊
-
-- [SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation](https://arxiv.org/abs/2011.07215) - Benchmark suite for deformable object manipulation (cloth, rope, fluid) with standardized RL environments. 📄 📊 ⭐
-
-- [Benchmarking the Sim-to-Real Gap in Cloth Manipulation](https://arxiv.org/abs/2310.09543) - Systematic evaluation of the sim-to-real gap in cloth manipulation across different simulators. 📄 📊
-
 ## Simulators & Engines
 
-- [SAPIEN: A SimulAted Part-based Interactive ENvironment](https://arxiv.org/abs/2003.08515) - Interactive simulation environment based on PhysX, excelling at articulated object modeling, widely used in medical simulation. 📄 🔧
+- [SAPIEN: A SimulAted Part-based Interactive ENvironment](https://arxiv.org/abs/2003.08515) - Interactive simulation environment based on PhysX, excelling at articulated and deformable object simulation. 📄 🔧
 
 - [Genesis World](https://genesis-world.readthedocs.io/) - Multi-physics simulation platform covering rigid, deformable, and fluid bodies. 29k+ GitHub stars. 🔧 ⭐
 
 - [XRTailor (OpenXRLab)](https://github.com/openxrlab/xrtailor) - GPU-accelerated cloth simulation engine for large-scale data generation. 🔧
 
-## Dexterous Manipulation + Deformable
+- [Position Based Dynamics (PBD)](https://matthias-research.github.io/pages/tenMinutePhysics/09-pbd.html) - Classic introductory resource for Position Based Dynamics simulation. 🔧
 
-- [DexDeform: Dexterous Deformable Object Manipulation with Human Demonstrations and Differentiable Physics](https://arxiv.org/abs/2304.03223) - Dexterous hand + deformable object manipulation combining human demonstrations with differentiable physics. 📄 ⭐
-
-- [RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation](https://arxiv.org/abs/2506.18088) - Automated large-scale data generation for bimanual manipulation, built on SAPIEN with cross-embodiment support. 📄 🔧
-
-- [SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation](https://arxiv.org/abs/2606.08278) - MuJoCo + Isaac Sim joint solution for humanoid loco-manipulation (rigid body only). 📄
-
-## Garment & Cloth
+## Cloth & Garment Simulation
 
 - [GarmentLab: A Unified Simulation and Benchmark for Garment Manipulation](https://arxiv.org/abs/2411.01200) - Unified simulation and benchmark for garment manipulation tasks. 📄 📊 ⭐
 
 - [ClothesNet: An Information-Rich 3D Garment Model Repository with Simulated Clothes Environment](https://arxiv.org/abs/2308.09987) - Large-scale 3D garment dataset with rich annotations, including keypoints and boundary analysis. 📄 📊
 
-## Tactile Sensing
+- [Benchmarking the Sim-to-Real Gap in Cloth Manipulation](https://arxiv.org/abs/2310.09543) - Systematic evaluation of the sim-to-real gap in cloth manipulation across different simulators. 📄 📊
 
-- [UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking](https://arxiv.org/abs/2602.10093) - Complete visuo-tactile data generation pipeline, supporting 3 tactile sensors and 8 manipulation tasks. 📄 🔧 ⭐
+## Differentiable Simulation
 
-- [Neo-Zero](https://arxiv.org/search/?query=Neo-Zero&searchtype=all) - End-to-end dexterous hand + tactile + deformable manipulation based on UniVTAC simulator. 📄
+- [ThinShellLab: Thin-Shell Object Manipulations With Differentiable Physics Simulations](https://arxiv.org/abs/2404.00451) - Fully differentiable simulation platform for thin-shell materials (paper, cloth) with varying bending stiffness. 📄 🔧 ⭐
+
+- [Second-Order FEM for Deformable Surfaces](https://dl.acm.org/doi/10.1145/3592430) - High-order finite element method for improving accuracy in cloth / thin-shell simulation. 📄
+
+## Benchmarks & Environments
+
+- [SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation](https://arxiv.org/abs/2011.07215) - Benchmark suite for deformable object manipulation (cloth, rope, fluid) with standardized RL environments. 📄 📊 ⭐
+
+## Learning-Based Methods
+
+- [RAPID: Rapid Adaptation of Particle Dynamics for Generalized Deformable Object Mobile Manipulation](https://arxiv.org/abs/2603.18246) - Rapid adaptation of particle dynamics for generalized deformable object mobile manipulation. 📄
 
 ## Physics-Based 3D Asset Generation
 
@@ -69,16 +61,6 @@
 - [PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects](https://arxiv.org/abs/2605.21572) - First to include deformable objects in PhysX generation scope, unifying rigid/deformable/articulated. 📄 ⭐
 
 - [DiffGI: Differentiable Geometry Images](https://arxiv.org/abs/2607.13365) - 3D garment generation via differentiable geometry images (no integrated physics yet). 📄
-
-## Learning for Deformable Objects
-
-- [RAPID: Rapid Adaptation of Particle Dynamics for Generalized Deformable Object Mobile Manipulation](https://arxiv.org/abs/2603.18246) - Rapid adaptation of particle dynamics for generalized deformable object mobile manipulation. 📄
-
-## Fundamentals (PBD, FEM, etc.)
-
-- [Position Based Dynamics (PBD)](https://matthias-research.github.io/pages/tenMinutePhysics/09-pbd.html) - Classic introductory resource for Position Based Dynamics simulation. 🔧
-
-- [ThinShellLab: Thin-Shell Object Manipulations With Differentiable Physics Simulations](https://arxiv.org/abs/2404.00451) - Fully differentiable simulation platform for thin-shell materials (paper, cloth) with varying bending stiffness. 📄 🔧
 
 ---
 

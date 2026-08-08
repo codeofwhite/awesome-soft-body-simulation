@@ -2,6 +2,19 @@
 
 Thank you for your interest in contributing! 🎉
 
+## Scope / 范围
+
+This list focuses **only** on deformable / soft body simulation:
+
+- Physics engines and simulators for deformable bodies
+- Cloth and garment simulation
+- Differentiable simulation for deformable objects
+- Benchmarks and environments for deformable manipulation
+- Learning-based methods for deformable objects
+- Physics-based 3D asset generation (deformable / soft)
+
+**Out of scope:** dexterous manipulation, tactile sensing, rigid-body-only work, general robotics.
+
 ## How to Add a Paper / 如何添加论文
 
 **Edit one file, run one command:**
@@ -35,22 +48,18 @@ Thank you for your interest in contributing! 🎉
 
 ## Sections / 分类
 
-Place your entry in the most relevant section:
-
 | Section | Description |
 |---------|-------------|
+| `simulators` | Physics engines and simulation platforms |
+| `cloth` | Cloth and garment specific simulation |
+| `differentiable` | Differentiable simulation for deformable objects |
 | `benchmarks` | Standardized evaluation environments and datasets |
-| `simulators` | Simulation platforms and physics engines |
-| `dexterous` | Dexterous hand + deformable objects |
-| `garment` | Cloth/garment specific work |
-| `tactile` | Tactile sensing for manipulation |
-| `generation` | Generating 3D assets with physical properties |
 | `learning` | Learning-based methods for deformable manipulation |
-| `fundamentals` | Core algorithms (PBD, FEM, MPM, etc.) |
+| `generation` | Physics-based 3D asset generation |
 
 ## Quality Criteria / 质量标准
 
-- Resources should be **relevant** to soft body / deformable object simulation
+- Resources must be **relevant** to soft body / deformable object simulation
 - Papers should be **published** (conference, journal, or reputable preprint)
 - Tools should be **open source** or publicly available
 - Each entry should have a **working URL**
