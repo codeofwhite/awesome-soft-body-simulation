@@ -1,0 +1,229 @@
+# ============================================================
+# Awesome Soft Body Simulation — Paper Database
+# ============================================================
+# To add a new paper, just append an entry to the right section.
+# Then run: python generate.py
+# It will auto-generate README.md (EN) and README.zh-CN.md (CN).
+# ============================================================
+
+meta:
+  title_en: "Awesome Soft Body Simulation"
+  title_zh: "Awesome 柔体仿真"
+  description_en: "A curated list of resources on deformable/soft body simulation, dexterous manipulation, tactile sensing, and physics-based generation."
+  description_zh: "关于柔体/可变形体仿真、灵巧操作、触觉感知和物理驱动生成的精选资源列表。"
+
+# ------------------------------------------------------------
+# Each entry:
+#   - title:    paper title
+#   - url:      arxiv / project / github link
+#   - authors:  (optional) first author et al.
+#   - venue:    (optional) conference / journal
+#   - year:     publication year
+#   - tags:     list of [paper, tool, dataset, benchmark, star]
+#   - desc_en:  one-line English description
+#   - desc_zh:  one-line Chinese description
+# ------------------------------------------------------------
+
+sections:
+  - id: benchmarks
+    title_en: "Benchmarks & Datasets"
+    title_zh: "基准测试与数据集"
+    papers:
+      - title: "DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo"
+        url: "https://arxiv.org/abs/2605.16257"
+        venue: arXiv
+        year: 2026
+        tags: [paper, benchmark]
+        desc_en: "Task-oriented dexterous manipulation benchmark on MuJoCo, covering tool-use, bimanual coordination, and long-horizon execution."
+        desc_zh: "MuJoCo 上的任务导向灵巧操作 benchmark，覆盖工具使用、双臂协调和长时序执行。"
+
+      - title: "SoftVTBench: A Safety-Aware Visuo-Tactile Benchmark for Physically Constrained Robotic Manipulation"
+        url: "https://arxiv.org/abs/2607.04234"
+        venue: arXiv
+        year: 2026
+        tags: [paper, benchmark]
+        desc_en: "Safety-aware visuo-tactile benchmark focusing on physical constraints during deformable object manipulation."
+        desc_zh: "面向过程安全的视觉-触觉 benchmark，关注柔体操作中的物理约束。"
+
+      - title: "SoftGym: Benchmarking Deep Reinforcement Learning for Deformable Object Manipulation"
+        url: "https://arxiv.org/abs/2011.07215"
+        authors: "Xingyu Lin, Yufei Wang, Zixuan Huang, David Held"
+        venue: CoRL
+        year: 2020
+        tags: [paper, benchmark, star]
+        desc_en: "Benchmark suite for deformable object manipulation (cloth, rope, fluid) with standardized RL environments."
+        desc_zh: "柔体操作（布料、绳索、流体）的 benchmark 套件，提供标准化的 RL 环境。"
+
+      - title: "Benchmarking the Sim-to-Real Gap in Cloth Manipulation"
+        url: "https://arxiv.org/abs/2310.09543"
+        venue: arXiv
+        year: 2023
+        tags: [paper, benchmark]
+        desc_en: "Systematic evaluation of the sim-to-real gap in cloth manipulation across different simulators."
+        desc_zh: "布料操作中 sim-to-real gap 的系统评测，对仿真器选型有重要参考价值。"
+
+  - id: simulators
+    title_en: "Simulators & Engines"
+    title_zh: "仿真器与引擎"
+    papers:
+      - title: "SAPIEN: A SimulAted Part-based Interactive ENvironment"
+        url: "https://arxiv.org/abs/2003.08515"
+        authors: "Fanbo Xiang, Yuzhe Qin, Kaichun Mo et al."
+        venue: CVPR
+        year: 2020
+        tags: [paper, tool]
+        desc_en: "Interactive simulation environment based on PhysX, excelling at articulated object modeling, widely used in medical simulation."
+        desc_zh: "基于 PhysX 的交互式仿真环境，擅长铰链物体建模，广泛用于医学仿真。"
+
+      - title: "Genesis World"
+        url: "https://genesis-world.readthedocs.io/"
+        tags: [tool, star]
+        desc_en: "Multi-physics simulation platform covering rigid, deformable, and fluid bodies. 29k+ GitHub stars."
+        desc_zh: "多物理仿真平台，覆盖刚体、柔体、流体等，⭐ 29k+ GitHub stars。"
+
+      - title: "XRTailor (OpenXRLab)"
+        url: "https://github.com/openxrlab/xrtailor"
+        tags: [tool]
+        desc_en: "GPU-accelerated cloth simulation engine for large-scale data generation."
+        desc_zh: "GPU 加速布料仿真引擎，面向大规模数据生成。"
+
+  - id: dexterous
+    title_en: "Dexterous Manipulation + Deformable"
+    title_zh: "灵巧操作 + 柔体"
+    papers:
+      - title: "DexDeform: Dexterous Deformable Object Manipulation with Human Demonstrations and Differentiable Physics"
+        url: "https://arxiv.org/abs/2304.03223"
+        authors: "Sizhe Li, Zhiao Huang, Tao Chen et al."
+        venue: ICLR
+        year: 2023
+        tags: [paper, star]
+        desc_en: "Dexterous hand + deformable object manipulation combining human demonstrations with differentiable physics."
+        desc_zh: "灵巧手 + 柔体操作，结合人类示教与可微物理。"
+
+      - title: "RoboTwin 2.0: A Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation"
+        url: "https://arxiv.org/abs/2506.18088"
+        authors: "Tianxing Chen et al."
+        venue: arXiv
+        year: 2025
+        tags: [paper, tool]
+        desc_en: "Automated large-scale data generation for bimanual manipulation, built on SAPIEN with cross-embodiment support."
+        desc_zh: "自动化大规模双臂操作数据生成，基于 SAPIEN，支持跨本体。"
+
+      - title: "SIMPLE: Simulation-Based Policy Learning and Evaluation for Humanoid Loco-manipulation"
+        url: "https://arxiv.org/abs/2606.08278"
+        authors: "Songlin Wei, Zhenhao Ni, Jie Liu et al."
+        venue: arXiv
+        year: 2026
+        tags: [paper]
+        desc_en: "MuJoCo + Isaac Sim joint solution for humanoid loco-manipulation (rigid body only)."
+        desc_zh: "MuJoCo + Isaac Sim 联合方案，解决人形机器人的移动操作（仅刚体）。"
+
+  - id: garment
+    title_en: "Garment & Cloth"
+    title_zh: "衣物与布料"
+    papers:
+      - title: "GarmentLab: A Unified Simulation and Benchmark for Garment Manipulation"
+        url: "https://arxiv.org/abs/2411.01200"
+        authors: "Haoran Lu et al."
+        venue: NeurIPS
+        year: 2024
+        tags: [paper, benchmark, star]
+        desc_en: "Unified simulation and benchmark for garment manipulation tasks."
+        desc_zh: "衣物操作的统一仿真与 benchmark，重要参考。"
+
+      - title: "ClothesNet: An Information-Rich 3D Garment Model Repository with Simulated Clothes Environment"
+        url: "https://arxiv.org/abs/2308.09987"
+        venue: ICCV
+        year: 2023
+        tags: [paper, dataset]
+        desc_en: "Large-scale 3D garment dataset with rich annotations, including keypoints and boundary analysis."
+        desc_zh: "大规模衣物 3D 数据集，包含关键点和边界点的有趣思考。"
+
+  - id: tactile
+    title_en: "Tactile Sensing"
+    title_zh: "触觉感知"
+    papers:
+      - title: "UniVTAC: A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking"
+        url: "https://arxiv.org/abs/2602.10093"
+        authors: "Baijun Chen et al."
+        venue: arXiv
+        year: 2026
+        tags: [paper, tool, star]
+        desc_en: "Complete visuo-tactile data generation pipeline, supporting 3 tactile sensors and 8 manipulation tasks."
+        desc_zh: "完整的视觉-触觉数据生成 pipeline，支持 3 种触觉传感器和 8 个操作任务。"
+
+      - title: "Neo-Zero"
+        url: "https://arxiv.org/search/?query=Neo-Zero&searchtype=all"
+        tags: [paper]
+        desc_en: "End-to-end dexterous hand + tactile + deformable manipulation based on UniVTAC simulator."
+        desc_zh: "基于 UniVTAC 仿真器的灵巧手 + 触觉 + 柔体端到端方案。"
+
+  - id: generation
+    title_en: "Physics-Based 3D Asset Generation"
+    title_zh: "物理驱动 3D 资产生成"
+    papers:
+      - title: "PhysX-3D: Physical-Grounded 3D Asset Generation"
+        url: "https://arxiv.org/abs/2507.12465"
+        authors: "Ziang Cao, Zhaoxi Chen, Liang Pan, Ziwei Liu"
+        venue: NeurIPS (Spotlight)
+        year: 2025
+        tags: [paper, star]
+        desc_en: "End-to-end paradigm for physical-grounded 3D asset generation with PhysXNet dataset."
+        desc_zh: "端到端的物理驱动 3D 资产生成范式，包含 PhysXNet 数据集。"
+
+      - title: "PhysX-Anything: Simulation-Ready Physical 3D Assets from Single Image"
+        url: "https://arxiv.org/abs/2511.13648"
+        authors: "Ziang Cao, Fangzhou Hong, Zhaoxi Chen, Liang Pan, Ziwei Liu"
+        venue: arXiv
+        year: 2025
+        tags: [paper]
+        desc_en: "Generate simulation-ready 3D assets with physical properties from a single image."
+        desc_zh: "从单张图片生成带有物理特性的仿真就绪 3D 资产。"
+
+      - title: "PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects"
+        url: "https://arxiv.org/abs/2605.21572"
+        venue: arXiv
+        year: 2026
+        tags: [paper, star]
+        desc_en: "First to include deformable objects in PhysX generation scope, unifying rigid/deformable/articulated."
+        desc_zh: "首次将可变形体纳入 PhysX 生成范围，统一刚体/柔体/铰链体。"
+
+      - title: "DiffGI: Differentiable Geometry Images"
+        url: "https://arxiv.org/abs/2607.13365"
+        authors: "Eungjune Shim, Hansol Lee, Eunjung Ju"
+        venue: ECCV
+        year: 2026
+        tags: [paper]
+        desc_en: "3D garment generation via differentiable geometry images (no integrated physics yet)."
+        desc_zh: "基于可微几何图像的 3D 衣物生成方案（暂未集成物理特性）。"
+
+  - id: learning
+    title_en: "Learning for Deformable Objects"
+    title_zh: "柔体学习方法"
+    papers:
+      - title: "RAPID: Rapid Adaptation of Particle Dynamics for Generalized Deformable Object Mobile Manipulation"
+        url: "https://arxiv.org/abs/2603.18246"
+        authors: "Bohan Wu, Roberto Martín-Martín, Li Fei-Fei"
+        venue: ICRA
+        year: 2026
+        tags: [paper]
+        desc_en: "Rapid adaptation of particle dynamics for generalized deformable object mobile manipulation."
+        desc_zh: "粒子动力学的快速适应，面向泛化柔体移动操作。"
+
+  - id: fundamentals
+    title_en: "Fundamentals (PBD, FEM, etc.)"
+    title_zh: "基础理论（PBD、FEM 等）"
+    papers:
+      - title: "Position Based Dynamics (PBD)"
+        url: "https://matthias-research.github.io/pages/tenMinutePhysics/09-pbd.html"
+        tags: [tool]
+        desc_en: "Classic introductory resource for Position Based Dynamics simulation."
+        desc_zh: "Position Based Dynamics 模拟的经典入门资源。"
+
+      - title: "ThinShellLab: Thin-Shell Object Manipulations With Differentiable Physics Simulations"
+        url: "https://arxiv.org/abs/2404.00451"
+        venue: ICLR
+        year: 2024
+        tags: [paper, tool]
+        desc_en: "Fully differentiable simulation platform for thin-shell materials (paper, cloth) with varying bending stiffness."
+        desc_zh: "完全可微的薄壳仿真平台，覆盖纸、布等不同弯曲刚度的材料。"
