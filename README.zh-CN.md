@@ -105,6 +105,10 @@
 
 ---
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=codeofwhite/awesome-soft-body-simulation&type=Date)](https://star-history.com/#codeofwhite/awesome-soft-body-simulation&Date)
+
 ## 许可证
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
