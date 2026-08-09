@@ -7,6 +7,7 @@ Usage:
     python generate.py
 """
 
+import re
 import yaml
 from pathlib import Path
 
@@ -17,6 +18,20 @@ TAG_EMOJI = {
     "benchmark": "📊",
     "star": "⭐",
 }
+
+
+def github_anchor(heading: str) -> str:
+    """Convert a markdown heading to a GitHub-compatible anchor link."""
+    anchor = heading.lower()
+    # Remove characters that are not alphanumeric, space, or hyphen
+    anchor = re.sub(r"[^\w\s-]", "", anchor)
+    # Replace spaces with hyphens
+    anchor = re.sub(r"\s+", "-", anchor)
+    # Collapse multiple hyphens
+    anchor = re.sub(r"-+", "-", anchor)
+    # Remove leading/trailing hyphens
+    anchor = anchor.strip("-")
+    return anchor
 
 
 def render_entry(paper: dict, lang: str) -> str:
@@ -37,7 +52,6 @@ def render_entry(paper: dict, lang: str) -> str:
 def render_section(section: dict, lang: str) -> str:
     """Render a full section with heading and entries."""
     title = section[f"title_{lang}"]
-    sid = section["id"]
     lines = [f"## {title}", ""]
     for paper in section["papers"]:
         lines.append(render_entry(paper, lang))
@@ -70,10 +84,9 @@ def generate(data: dict, lang: str, output_path: Path):
     lines.append(f"## {toc_label}")
     lines.append("")
     for section in data["sections"]:
-        title_key = f"title_{lang}"
-        sid = section["id"]
-        stitle = section[title_key]
-        lines.append(f"- [{stitle}](#{sid})")
+        stitle = section[f"title_{lang}"]
+        anchor = github_anchor(stitle)
+        lines.append(f"- [{stitle}](#{anchor})")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -110,7 +123,11 @@ def generate(data: dict, lang: str, output_path: Path):
         f"| {tag_header} | {meaning_header} |",
         "|-----|---------|",
     ])
+    seen_emojis = set()
     for tag, emoji in TAG_EMOJI.items():
+        if emoji in seen_emojis:
+            continue
+        seen_emojis.add(emoji)
         desc_text = legend_descriptions[lang].get(tag, tag)
         lines.append(f"| {emoji} | {desc_text} |")
     lines.append("")

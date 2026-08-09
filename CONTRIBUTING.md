@@ -4,16 +4,17 @@ Thank you for your interest in contributing! 🎉
 
 ## Scope / 范围
 
-This list focuses **only** on deformable / soft body simulation:
+This list focuses on deformable / soft body simulation **for embodied AI**:
 
-- Physics engines and simulators for deformable bodies
-- Cloth and garment simulation
-- Differentiable simulation for deformable objects
-- Benchmarks and environments for deformable manipulation
-- Learning-based methods for deformable objects
-- Physics-based 3D asset generation (deformable / soft)
+- Simulation environments and platforms with deformable object support
+- Manipulation tasks involving deformable objects (cloth, rope, soft bodies)
+- Sim-to-Real transfer for deformable manipulation
+- Benchmarks and evaluation for deformable object tasks
+- 3D asset generation for building simulation environments
+- Learning and policy methods for deformable object manipulation
+- Foundational simulation techniques (physics engines, numerical methods)
 
-**Out of scope:** dexterous manipulation, tactile sensing, rigid-body-only work, general robotics.
+**Out of scope:** pure graphics/rendering, rigid-body-only work, tactile sensing (unless directly tied to deformable manipulation).
 
 ## How to Add a Paper / 如何添加论文
 
@@ -50,16 +51,16 @@ This list focuses **only** on deformable / soft body simulation:
 
 | Section | Description |
 |---------|-------------|
-| `simulators` | Physics engines and simulation platforms |
-| `cloth` | Cloth and garment specific simulation |
-| `differentiable` | Differentiable simulation for deformable objects |
+| `environments` | Simulation environments & platforms for Embodied AI |
+| `tasks` | Deformable object manipulation tasks (cloth, rope, etc.) |
+| `sim2real` | Sim-to-real transfer methods and research |
 | `benchmarks` | Standardized evaluation environments and datasets |
-| `learning` | Learning-based methods for deformable manipulation |
-| `generation` | Physics-based 3D asset generation |
+| `generation` | 3D asset generation for building simulation environments |
+| `foundations` | Foundational simulation techniques (engines, numerical methods) |
 
 ## Quality Criteria / 质量标准
 
-- Resources must be **relevant** to soft body / deformable object simulation
+- Resources must be **relevant** to deformable object simulation for embodied AI
 - Papers should be **published** (conference, journal, or reputable preprint)
 - Tools should be **open source** or publicly available
 - Each entry should have a **working URL**
