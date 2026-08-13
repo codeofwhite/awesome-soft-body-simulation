@@ -28,6 +28,7 @@
 - [Isaac Sim / Isaac Lab](https://developer.nvidia.com/isaac-sim) - NVIDIA 机器人仿真平台，GPU 加速柔性体支持，面向大规模具身智能训练。 🔧 ⭐
 - [MuJoCo](https://mujoco.org/) - 先进物理引擎，v3.x 起支持柔性体仿真，机器人研究广泛采用。 🔧 ⭐
 - [Taichi](https://github.com/taichi-dev/taichi) - 高性能并行计算语言，具身智能研究中常用于可微柔体仿真。 🔧
+- [Real2Render2Real: Scaling Robot Data Without Dynamics Simulation or Robot Hardware](https://arxiv.org/abs/2505.09601) - 无需动力学仿真或机器人硬件，通过 Real→Render→Real 流水线大规模生成机器人训练数据。 📄 ⭐
 
 ## 柔性物体操作任务
 
@@ -35,6 +36,8 @@
 - [ClothesNet: An Information-Rich 3D Garment Model Repository with Simulated Clothes Environment](https://arxiv.org/abs/2308.09987) - 大规模衣物 3D 数据集，包含关键点和边界的丰富标注，面向操作研究。 📄 📊
 - [RAPID: Rapid Adaptation of Particle Dynamics for Generalized Deformable Object Mobile Manipulation](https://arxiv.org/abs/2603.18246) - 粒子动力学的快速适应，面向泛化柔性物体移动操作。 📄 ⭐
 - [Benchmarking the Sim-to-Real Gap in Cloth Manipulation](https://arxiv.org/abs/2310.09543) - 布料操作中 sim-to-real gap 的系统评测，对仿真器选型有重要参考价值。 📄 📊
+- [SoftMimicGen: A Data Generation System for Scalable Robot Learning in Deformable Object Manipulation](https://arxiv.org/abs/2603.25725) - MimicGen 在柔性物体操作领域的扩展，实现可扩展的机器人操作数据生成。 📄 ⭐
+- [DeformGen: Dynamics-Based Topology Augmentation for Deformable Manipulation Policy Learning](https://arxiv.org/abs/2606.25939) - 基于动力学的拓扑增强方法，用于柔性物体操作策略学习，结合 PhysTwin 与 Real2Render2Real。 📄
 
 ## Sim-to-Real 迁移
 
@@ -50,6 +53,8 @@
 - [PhysX-Anything: Simulation-Ready Physical 3D Assets from Single Image](https://arxiv.org/abs/2511.13468) - 从单张图片生成带有物理特性的仿真就绪 3D 资产。 📄
 - [PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects](https://arxiv.org/abs/2605.21572) - 首次将可变形体纳入 PhysX 生成范围，统一刚体/柔体/铰链体。 📄 ⭐
 - [DiffGI: Differentiable Geometry Images](https://arxiv.org/abs/2607.13365) - 基于可微几何图像的 3D 衣物生成方案（暂未集成物理特性）。 📄
+- [PhysTwin: Physics-Informed Reconstruction and Simulation of Deformable Objects from Videos](https://arxiv.org/abs/2503.17973) - 从视频中物理感知地重建与仿真可变形物体，是 Real2Render2Real 和 DeformGen 的前置工作。 📄 ⭐
+- [Gaussian Garments: Reconstructing Simulation-Ready Clothing with Photorealistic Appearance from Multi-View Video](https://arxiv.org/abs/2409.08189) - 从多视角视频重建可仿真、具备照片级真实感的独立服装资产。 📄
 
 ## 基础仿真技术
 
